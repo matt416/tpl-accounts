@@ -1,82 +1,119 @@
 import Head from 'next/head'
+import Layout from "/components/layouts/Layout"
+
+
+const Card = ({ children, className, ...props }) => <div className={ `w-full p-4 bg-white rounded ${ className }`} { ...props }>{ children }</div>
 
 export default function Home() {
+
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
+    <Layout>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Account summary</title>
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+      <main id="main" tabIndex="-1" className="col-span-full grid grid-cols-6 gap-12">
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">
-            pages/index.js
-          </code>
-        </p>
+        <h1 className="text-3xl font-bold col-span-full">Account summary</h1>
 
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
+        <div role="alert" className="col-span-full border-t-4 p-4 border-red-500 bg-white">
+          <h2 className="text-xl">Your library card has expired</h2>
+          <p>Your library card expired on 19 Mar 2016. To renew your card either,</p>
+          <ul className="list-disc list-inside">
+            <li>Bring name and address identification to any library branch</li>
+            <li>Renew your library card online</li>
+          </ul>
+        </div>
 
-          <a
-            href="https://nextjs.org/learn"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
+        <div className="col-span-full md:col-span-2 min-h-full gap-4 flex flex-col">
+          <Card>
+            <h2 className="text-2xl">Checkouts</h2>
+          </Card>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
+          <Card>
+            <h2 className="text-2xl">Holds</h2>
+          </Card>
 
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <Card>
+            <h2 className="text-2xl">Borrowing History</h2>
+          </Card>
+
+          <Card>
+            <h2 className="text-2xl flex justify-between">
+              Saved Items
+              <span>1</span>
+            </h2>
+          </Card>
+
+          <Card>
+            <h2 className="text-2xl">Charges</h2>
+          </Card>
+
+        </div>
+
+        <div className="col-span-full md:col-span-4">
+          <div>
+            <h2 className="text-2xl">eBooks</h2>
+            <p>Looking for your eBook account?</p>
+            <a href="#">Overdrive eBooks & eAudiobooks <span aria-hidden="true">&gt;</span></a>
+          </div>
+
+          <div>
+            <h2 className="text-2xl">Print card</h2>
+            <a href="#" className="underline">Check your print card balance <span aria-hidden="true">&gt;</span></a>
+          </div>
+
+          <div className="mb-8">
+            <h2 className="text-2xl">Your Home Branch</h2>
+            <a href="#">Toronto Reference Library</a>
+
+            <div className="bg-yellow-50 border-t border-yellow-200 p-4 space-y-3">
+              <h3 className="text-xl font-bold">Service update <span className="sr-only"> for the Toronto Reference Library</span></h3>
+              <p>Due to ongoing elevator maintenance, some closed stacks material is not currently accessible. Library staff will notify you if the item you have requested cannot be fulfilled at this time.</p>
+            </div>
+
+            <h3>Address & contact</h3>
+
+            <h3>Hours</h3>
+          </div>
+
+          <h2>Your Library Card</h2>
+
         </div>
       </main>
 
-      <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
-    </div>
+    </Layout>
   )
+
+
 }
+
+
+/**
+ * <aside className="col-span-2 min-h-full">
+        <div>
+          <h2>Checkouts</h2>
+        </div>
+
+        <div>
+          <h2>Holds</h2>
+        </div>
+
+        <div>
+          <h2>Borrowing History</h2>
+        </div>
+
+        <div>
+          <h2>Saved Items 1</h2>
+        </div>
+
+        <div>
+          <h2>Charges</h2>
+        </div>
+
+
+
+
+      </aside>
+ */

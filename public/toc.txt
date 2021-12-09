@@ -1,0 +1,42 @@
+h1. Account
+  h2. Summary ( actual page title )
+  h2. Checkout
+  h2. Holds
+  h2. Borrowing History
+  h2. Saved Items
+  h2. 1
+  h2. Charges
+  h2. Looking for your eBook account?
+  h2. Check your print card balance
+  h2. Your Home Branch
+    h3. Service Update
+      h4. Hours
+  h2. Your Library Card
+    h3. About the Library
+    h3. Blogs, Podcasts & Publications
+    h3. Library Policies & Terms of Use
+    h3. Media Relations & News Releases
+    h3. Accessibility
+    h3. Support Your Library
+
+
+h1. Account Summary
+  h2. Checkout
+  h2. Holds
+  h2. Borrowing History
+  h2. Saved Items (1)
+  h2. Charges
+  h2. eBooks ( was Looking for your eBook account? )
+  h2. Print Card ( was Check your print card balance )
+  h2. Your Home Branch
+    h3. Service update
+    h3. Hours
+    h3. Address & Telephone ( not currently listed )
+  h2. Your Library Card
+  h2. Footer
+    h3. About the Library
+    h3. Blogs, Podcasts & Publications
+    h3. Library Policies & Terms of Use
+    h3. Media Relations & News Releases
+    h3. Accessibility
+    h3. Support Your Library

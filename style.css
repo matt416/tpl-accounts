@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/** Set an active focus outline colour */
+:root {
+  --active-focus-outline: #D5009B; /** Purple colour with 4.5 or greater contrast ratio on black and white backgrounds */
+}
+/** Setup page to have a min height of 100% */
+body, html, #__next {
+  min-height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:stretch;
+}
+
+/** Focus State */
+*:focus {
+  outline:4px var(--active-focus-outline) solid;
+  outline-offset:2px;
+  z-index:1000;
+  position:relative;
+  border-radius:0.05rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+/** Set outline colour to white on red background */
+.error .custom\:focus {
+  outline-color:white;
+}
+
+
+/** Set a scroll margin to give space above element when it becomes focused */
+main, .scroll-m-16 {
+  scroll-margin-top: 4rem;
+}
+
+/** Set an underline to all links inside the main content area by default */
+main a {
+  @apply underline;
+}
+
+/** Global table heading styles */
+table th {
+  text-align:left;
+}
+
+table thead {
+  @apply bg-gray-100 ;
+}
+
+table th {
+  @apply p-2 font-normal text-[15px];
+}
