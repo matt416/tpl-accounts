@@ -1,3 +1,6 @@
+// Landmarks (header (nav, nav, search), nav, main, footer, )
+
+
 export default function HtmlSetup({}) {
   // <!doctype html>=
 

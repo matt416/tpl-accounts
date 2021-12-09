@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Holds</title>
+        <title>Holds : Toronto Public Library</title>
       </Head>
 
       <main id="main" tabIndex="-1" className="col-span-full">

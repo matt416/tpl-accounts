@@ -1,7 +1,7 @@
 export default function SiteHeader({}) {
 
   return (
-    <div className="w-full bg-blue-dark">
+    <header className="w-full bg-blue-dark">
 
     <div className="flex items-stretch">
 
@@ -9,13 +9,13 @@ export default function SiteHeader({}) {
         <img src="/tpl-logo.svg" alt="Toronto Public Library" width="128" height="64" />
       </a>
 
-      <div className="text-white font-bold flex items-stretch">
+      <nav aria-label="Login & contact" className="text-white font-bold flex items-stretch">
         <ul className="flex flex-auto justify-stretch items-stretch">
           <li className="text-center p-6 border-r border-white border-opacity-10 flex items-center"><a href="#">Sign out</a></li>
           <li className="text-center p-6 border-r border-white border-opacity-10 flex items-center"><a href="#">Your account</a></li>
           <li className="text-center p-6 border-r border-white border-opacity-10 flex items-center"><a href="#">Contact us</a></li>
         </ul>
-      </div>
+      </nav>
 
       <form role="search" className="flex-1 space-x-2 flex items-center p-4">
         <label htmlFor="site-search" className="sr-only text-white">Search books, movies, branches, programs & more</label>
@@ -24,7 +24,7 @@ export default function SiteHeader({}) {
       </form>
     </div>
 
-    <nav aria-label="Site menu" className="w-full text-white font-bold border-t border-white border-opacity-10">
+    <nav aria-label="Main menu" className="w-full text-white font-bold border-t border-white border-opacity-10">
       <ul className="flex justify-stretch">
         <li className="flex-auto text-center p-3"><a href="#">Books, DVDs, & Music</a></li>
         <li className="flex-auto text-center p-3"><a href="#">eBooks & Online Content</a></li>
@@ -36,6 +36,6 @@ export default function SiteHeader({}) {
       </ul>
     </nav>
 
-    </div>
+    </header>
   )
 }

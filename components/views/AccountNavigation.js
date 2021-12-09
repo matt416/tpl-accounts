@@ -31,6 +31,7 @@ export default function AccountNavigation() {
         <MenuItem label="Checkouts" href="/checkouts/" />
         <MenuItem label="Holds" href="/holds/" />
         <MenuItem label="Browsing History" href="/browsing-history/" />
+        <MenuItem label="Saved (1)" href="/saved/"/>
         <MenuItem label="Charges ($0.00)" href="/charges/" />
         <MenuItem label="Account Settings" href="/settings/card/" />
       </ul>

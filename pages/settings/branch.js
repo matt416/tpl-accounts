@@ -5,6 +5,7 @@ import { useEffect, useState, useRef, useLayoutEffect } from 'react'
 import { useMainFocus } from 'lib/useMainFocus'
 import { FocusScope } from "react-aria"
 import BranchOptions from 'components/views/BranchOptions'
+import BranchHours from 'components/views/BranchHours'
 
 function Modal({ isOpen, isUpdate, responseRef, openerRef, setOpen, handleCloseModal, handleSaveCloseModal  }){
   useLayoutEffect(() => {
@@ -133,54 +134,7 @@ export default function AccountBranch() {
             </div>
           </dl>
 
-          <table>
-            <caption className="text-left font-bold my-2">Branch Hours</caption>
-            <thead>
-              <tr>
-                <th scope="col">Day</th>
-                <th scope="col">Opens</th>
-                <th scope="col">Closes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">Monday</th>
-                <td>9:00am</td>
-                <td>8:30pm</td>
-              </tr>
-              <tr>
-                <th scope="row">Tuesday</th>
-                <td>9:00am</td>
-                <td>8:30pm</td>
-              </tr>
-              <tr>
-                <th scope="row">Wednesday</th>
-                <td>9:00am</td>
-                <td>8:30pm</td>
-              </tr>
-              <tr className="bg-tpl-blue text-blue-900 bg-opacity-10">
-                <th scope="row">Thursday (Today)</th>
-                <td>9:00am</td>
-                <td>8:30pm</td>
-              </tr>
-              <tr>
-                <th scope="row">Friday</th>
-                <td>9:00am</td>
-                <td>8:30pm</td>
-              </tr>
-              <tr>
-                <th scope="row">Saturday</th>
-                <td>9:00am</td>
-                <td>5:00pm</td>
-              </tr>
-              <tr>
-                {/* <span aria-hidden="true">Sun</span> <span className="sr-only">Sunday</span> */}
-                <th scope="row">Sunday</th>
-                <td>1:30pm</td>
-                <td>5:00pm</td>
-              </tr>
-            </tbody>
-          </table>
+          <BranchHours />
 
           {/* Explore Learn more text vs something descriptive */}
           <span className="mt-4">

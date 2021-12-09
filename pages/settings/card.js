@@ -27,7 +27,7 @@ export default function AccountCard() {
 
           <div className="flex flex-col space-y-1">
             <h2 className="text-gray-800">Card expiry</h2>
-            <span className="font-bold text-[18px] inline-flex gap-2"><img src="/error.svg" width="24" height="24" alt=""/><span className="text-red-600">Expired:</span> 19 Mar 2016</span>
+            <span className="font-bold text-[18px] inline-flex items-center gap-2"><img src="/error.svg" width="24" height="24" alt=""/><span className="text-red-600">Expired:</span> 19 Mar 2016</span>
 
             <div className="p-4">
               There are two ways to renew your card:

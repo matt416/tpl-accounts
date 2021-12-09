@@ -5,12 +5,11 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Charges : Toronto Public Library</title>
+        <title>Saved Items : Toronto Public Library</title>
       </Head>
 
       <main id="main" tabIndex="-1" className="col-span-full">
-        <h1 className="text-3xl font-bold ">Charges</h1>
-
+        <h1 className="text-3xl font-bold">Saved Items (1)</h1>
       </main>
     </Layout>
   )
