@@ -12,6 +12,7 @@ export default function HtmlSetup({}) {
     </head>
 
     <body>
+
     </body>
     </html>
   )
